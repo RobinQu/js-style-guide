@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>readme</title>
+  <title>language</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
 /* 
@@ -235,37 +235,27 @@ sub {
 </head>
 <body class="normal">
   <div id="wrapper">
-      <h1 id="aliyuncloudappjavascript">Aliyun CloudApp Javascript 代码规范</h1>
-
-<p>该代码规提出了一些规则来提高代码在团队协作中的可读性和可重用性。</p>
-
-<h2 id="">目录</h2>
+      <h1 id="">语言规则</h1>
 
 <ul>
-<li><p><a href="language.html">Language Guide</a></p></li>
-<li><p><a href="style.html">Style Guide</a></p></li>
+<li>总是使用var声明变量: <em>Always</em></li>
+<li><strong>NAMES_LIKE_THIS</strong> 作为常量声明. 使用 <strong>@const</strong> 标记. 避免使用const关键字</li>
+<li><em>Always</em> 使用分号结尾.</li>
+<li>不要在｛｝代码块内部申明函数，应使用var变量声明函数: <em>Never</em></li>
+<li>优先使用标准功能: <em>Always</em></li>
+<li>禁止使用Object、Array等基础对象构造函数: <em>Never</em></li>
+<li>多层的prototype继承: <em>Not-preferred</em></li>
+<li>闭包: <em>Careful</em></li>
+<li>eval(): <em>Not-preferred</em></li>
+<li>with(): <em>Never</em></li>
+<li><strong>this</strong> keyword: <em>Careful</em></li>
+<li>for-in-loop: <em>Careful</em></li>
+<li>关联数组: <em>Never</em></li>
+<li>多行字符串: <em>Never</em></li>
+<li>修改原生对象的prototype: <em>Never</em></li>
+<li>一个作用域内只使用一个var <em>Always</em></li>
+<li>当与0或空字符串比较时，<a href="https://developer.mozilla.org/en/JavaScript/Reference/Operators/Comparison_Operators">使用===</a> <em>Always</em></li>
 </ul>
-
-<h2 id="">组成</h2>
-
-<ul>
-<li><p>JS 语言规则</p>
-
-<p>一些可以更充分利用JS语言特性的Tips&amp;Tricks</p></li>
-<li><p>JS 风格规范</p>
-
-<p>帮助自己和他人能够更好维护代码的规则</p></li>
-</ul>
-
-<h2 id="">贡献</h2>
-
-<p>这篇文档是由Markdown或者Multi-Markdown编写的，然后再转换为HTML作为最终输出。</p>
-
-<p>如果你也像参与进来，可以通过再项目的SVN目录下创建source/ch/你的名字.md，在里面写下你的建议内容。我会定期将这些建议合并到正式文档里面。</p>
-
-<h2 id="">联系</h2>
-
-<p>目前文档由long.qu维护，minjian.wang来审核。你可以联系我们之中的任何一人。</p>
 
     </div>
 </body>

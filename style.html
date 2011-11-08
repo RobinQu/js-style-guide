@@ -1,0 +1,444 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+/* 
+   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Some simple Github-like styles, with syntax highlighting CSS via Pygments (requires custom processor).
+   via https://github.com/alampros/Docter
+*/
+html {
+	margin:0;
+	padding:1em;
+}
+body{
+    -webkit-font-smoothing: antialiased;
+	font: 13.34px helvetica,arial,freesans,clean,sans-serif;
+	line-height: 1.4em;
+	color: #333;
+	border: none;
+	line-height: 1.5;
+	margin: 0 auto;
+    max-width: 900px; 
+	text-align:left;
+	color:black;
+    background:#fff;
+}
+
+@media screen {
+    #wrapper { padding:9px; background:#F8F8F8;	border:1px solid #E9E9E9;}    
+    body.inverted, .inverted #wrapper {
+        color: #eee;
+        background:#333;
+        border-color:#555
+    }
+    .inverted h2 {
+        border-color:#555
+    }
+}
+h1 {
+	font-size: 170%;
+	border-top: 4px solid #aaa;
+	padding-top: .5em;
+	margin-top: 1.5em;
+}
+
+h1:first-child {
+	margin-top: 0 !important;
+	padding-top: .25em !important;
+	border-top: none !important;
+}
+
+h2 {
+	font-size: 150%;
+	margin-top: 1.5em;
+	border-top: 4px solid #e0e0e0;
+	padding-top: .5em;
+}
+
+h3 {
+	margin-top: 1em;
+}
+
+p {
+	margin: 1em 0!important;
+	line-height: 1.5em!important;
+}
+
+pre, code {
+    font: 12px 'Bitstream Vera Sans Mono','Courier',monospace;
+}
+pre {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.0664062) 0px 1px 2px 0px inset;
+    background-color: #EEE;
+    border: #ddd 1px solid;
+    color: #444;
+    display: block;
+    margin: 12px 0;
+    overflow: auto;
+    padding: 5px;
+    white-space: pre;
+    max-width:100%;
+    overflow:auto;
+}
+code {
+    background-color: ghostWhite;
+    color: #444!important;
+    padding: 0 .2em;
+    border: 1px solid #DEDEDE;
+}
+pre code {
+    padding: 0!important;
+    font-size: 12px!important;
+    background-color: #EEE!important;
+    border: none!important;
+    overflow:visible;
+}
+a, a code {
+	color: #4183C4;
+	text-decoration:none;
+}
+
+table td {
+	border-bottom: 1px solid #DDD!important;
+	padding: .2em 1em!important;
+}
+
+.shadow{
+	-webkit-box-shadow:0 5px 15px #000;
+	-moz-box-shadow:0 5px 15px #000;
+	box-shadow:0 5px 15px #000;		
+}
+
+
+.c{color:#998;font-style:italic;}
+.err{color:#a61717;background-color:#e3d2d2;}
+.k{font-weight:bold;}
+.o{font-weight:bold;}
+.cm{color:#998;font-style:italic;}
+.cp{color:#999;font-weight:bold;}
+.c1{color:#998;font-style:italic;}
+.cs{color:#999;font-weight:bold;font-style:italic;}
+.gd{color:#000;background-color:#fdd;}
+.gd .x{color:#000;background-color:#faa;}
+.ge{font-style:italic;}
+.gr{color:#a00;}
+.gh{color:#999;}
+.gi{color:#000;background-color:#dfd;}
+.gi .x{color:#000;background-color:#afa;}
+.go{color:#888;}
+.gp{color:#555;}
+.gs{font-weight:bold;}
+.gu{color:#800080;font-weight:bold;}
+.gt{color:#a00;}
+.kc{font-weight:bold;}
+.kd{font-weight:bold;}
+.kn{font-weight:bold;}
+.kp{font-weight:bold;}
+.kr{font-weight:bold;}
+.kt{color:#458;font-weight:bold;}
+.m{color:#099;}
+.s{color:#d14;}
+.na{color:#008080;}
+.nb{color:#0086B3;}
+.nc{color:#458;font-weight:bold;}
+.no{color:#008080;}
+.ni{color:#800080;}
+.ne{color:#900;font-weight:bold;}
+.nf{color:#900;font-weight:bold;}
+.nn{color:#555;}
+.nt{color:#000080;}
+.nv{color:#008080;}
+.ow{font-weight:bold;}
+.w{color:#bbb;}
+.mf{color:#099;}
+.mh{color:#099;}
+.mi{color:#099;}
+.mo{color:#099;}
+.sb{color:#d14;}
+.sc{color:#d14;}
+.sd{color:#d14;}
+.s2{color:#d14;}
+.se{color:#d14;}
+.sh{color:#d14;}
+.si{color:#d14;}
+.sx{color:#d14;}
+.sr{color:#009926;}
+.s1{color:#d14;}
+.ss{color:#990073;}
+.bp{color:#999;}
+.vc{color:#008080;}
+.vg{color:#008080;}
+.vi{color:#008080;}
+.il{color:#099;}
+
+.poetry pre {
+    font-family:Georgia, Garamond, serif !important;
+    font-style:italic;
+    font-size:110% !important;
+    line-height:1.6em;
+    display:block;
+    margin-left:1em;
+}
+
+.poetry pre code {
+    font-family:Georgia, Garamond, serif !important;
+}
+
+sup,sub,a.footnote {
+	font-size: 1.4ex;
+	height: 0;
+	line-height: 1;
+	vertical-align: super;
+	position: relative;
+}
+sub {
+    vertical-align: sub;
+    top: -1px;
+}
+
+@media print {
+    body {
+        background:#fff;
+    }
+    #wrapper {
+        background: #fff;
+        border:none;
+    }
+    code {
+        background-color: #fff;
+        color: #444!important;
+        padding: 0 .2em;
+        border: 1px solid #DEDEDE;
+    }
+    pre code {
+        padding: 0!important;
+        font-size: 12px!important;
+        background-color: #fff!important;
+        border: none!important;
+        overflow:visible;
+    }
+    pre {
+        background: #fff;
+        white-space: pre-wrap;
+        white-space: pre-line;
+    }
+}
+</style>
+
+</head>
+<body class="normal">
+  <div id="wrapper">
+      <h1 id="">风格规范</h1>
+
+<ul>
+<li><p>变量命名，驼背法: <em>Always</em></p>
+
+<p><strong>functionNamesLikeThis</strong>, <strong>variableNamesLikeThis</strong>, <strong>ClassNamesLikeThis</strong>, <strong>EnumNamesLikeThis</strong>, <strong>methodNamesLikeThis</strong>, and <strong>SYMBOLIC_CONSTANTS_LIKE_THIS</strong></p></li>
+<li><p>使用2个空格作为一个单位的缩进 <em>Preferred</em></p></li>
+<li><p>以空格结尾 <em>Never</em></p></li>
+<li><p>使用带名称的闭包 <em>Preferred</em></p>
+
+<pre><code>req.on('end', function onEnd() {
+  console.log('winning');
+});
+</code></pre></li>
+<li><p>Getters <em>Preferred</em></p></li>
+<li><p>Setters <em>Careful</em></p></li>
+<li><p>嵌套闭包 <em>Never</em></p>
+
+<pre><code>//wrong 
+setTimeout(function() {
+  client.connect(function() {
+    console.log('losing');
+  });
+}, 1000);
+</code></pre></li>
+<li><p>重要的判断条件，要单独创建一个变量</p>
+
+<pre><code>var isAuthorized = (user.isAdmin() || user.isModerator());
+if (isAuthorized) {
+  console.log('winning');
+}
+</code></pre></li>
+<li><p>自定义的toString方法</p>
+
+<p>确保没有任何副作用</p></li>
+<li><p>代码格式化</p>
+
+<ul>
+<li><p>大括号: <em>Always</em></p>
+
+<pre><code>if (something) {
+  // ...
+} else {
+  // ...
+}
+</code></pre></li>
+<li><p>数组和对象初始化: <em>Always</em></p>
+
+<pre><code>var arr = [1, 2, 3];  // No space after [ or before ].
+var obj = {a: 1, b: 2, c: 3};  // No space after { or before }.
+</code></pre></li>
+<li><p>多行字面量以2个空格打头，并以逗号结尾: <em>Always</em></p>
+
+<pre><code>// Object initializer.
+var inset = {
+  top: 10,
+  right: 20,
+  bottom: 15,
+  left: 12
+};
+
+// Array initializer.
+this.rows_ = [
+  '&quot;Slartibartfast&quot; &lt;fjordmaster@magrathea.com&gt;',
+  '&quot;Zaphod Beeblebrox&quot; &lt;theprez@universe.gov&gt;',
+  '&quot;Ford Prefect&quot; &lt;ford@theguide.com&gt;',
+  '&quot;Arthur Dent&quot; &lt;has.no.tea@gmail.com&gt;',
+  '&quot;Marvin the Paranoid Android&quot; &lt;marv@googlemail.com&gt;',
+  'the.mice@magrathea.com'
+];
+</code></pre></li>
+<li><p>字面量键值名称无需对齐: <em>Preferred</em></p>
+
+<pre><code>CORRECT_Object.prototype = {
+  a: 0,
+  b: 1,
+  lengthyName: 2
+};
+</code></pre></li>
+<li><p>函数参数格式: <em>Preferred</em></p>
+
+<pre><code>// Four-space, wrap at 80.  Works with very long function names, survives
+// renaming without reindenting, low on space.
+goog.foo.bar.doThingThatIsVeryDifficultToExplain = function(
+    veryDescriptiveArgumentNumberOne, veryDescriptiveArgumentTwo,
+    tableModelEventHandlerProxy, artichokeDescriptorAdapterIterator) {
+  // ...
+};
+
+// Four-space, one argument per line.  Works with long function names,
+// survives renaming, and emphasizes each argument.
+goog.foo.bar.doThingThatIsVeryDifficultToExplain = function(
+    veryDescriptiveArgumentNumberOne,
+    veryDescriptiveArgumentTwo,
+    tableModelEventHandlerProxy,
+    artichokeDescriptorAdapterIterator) {
+  // ...
+};
+
+// Parenthesis-aligned indentation, wrap at 80.  Visually groups arguments,
+// low on space.
+function foo(veryDescriptiveArgumentNumberOne, veryDescriptiveArgumentTwo,
+             tableModelEventHandlerProxy, artichokeDescriptorAdapterIterator) {
+  // ...
+}
+
+// Parenthesis-aligned, one argument per line.  Visually groups and
+// emphasizes each individual argument.
+function bar(veryDescriptiveArgumentNumberOne,
+             veryDescriptiveArgumentTwo,
+             tableModelEventHandlerProxy,
+             artichokeDescriptorAdapterIterator) {
+  // ...
+}
+
+if (veryLongFunctionNameA(
+        veryLongArgumentName) ||
+    veryLongFunctionNameB(
+    veryLongArgumentName)) {
+  veryLongFunctionNameC(veryLongFunctionNameD(
+      veryLongFunctioNameE(
+          veryLongFunctionNameF)));
+}
+</code></pre></li>
+<li><p>传递匿名函数: <em>Preferred</em></p>
+
+<pre><code>prefix.something.reallyLongFunctionName('whatever', function(a1, a2) {
+  if (a1.equals(a2)) {
+    someOtherLongFunctionName(a1);
+  } else {
+    andNowForSomethingCompletelyDifferent(a2.parrot);
+  }
+});
+
+var names = prefix.something.myExcellentMapFunction(
+    verboselyNamedCollectionOfItems,
+    function(item) {
+      return item.name;
+    });
+</code></pre></li>
+<li><p>使用更多的缩进: <em>Preferred</em></p>
+
+<pre><code>someWonderfulHtml = '' +
+                    getEvenMoreHtml(someReallyInterestingValues, moreValues,
+                                    evenMoreParams, 'a duck', true, 72,
+                                    slightlyMoreMonkeys(0xfff)) +
+                    '';
+
+thisIsAVeryLongVariableName =
+    hereIsAnEvenLongerOtherFunctionNameThatWillNotFitOnPrevLine();
+
+thisIsAVeryLongVariableName = 'expressionPartOne' + someMethodThatIsLong() +
+    thisIsAnEvenLongerOtherFunctionNameThatCannotBeIndentedMore();
+
+someValue = this.foo(
+    shortArg,
+    'Some really long string arg - this is a pretty common case, actually.',
+    shorty2,
+    this.bar());
+
+if (searchableCollection(allYourStuff).contains(theStuffYouWant) &amp;&amp;
+    !ambientNotification.isActive() &amp;&amp; (client.isAmbientSupported() ||
+                                        client.alwaysTryAmbientAnyways())) {
+  ambientNotification.activate();
+}
+</code></pre></li>
+<li><p>使用空行来将逻辑上相关的代码分组: <em>Preferred</em></p></li>
+<li><p>二元和三元运算符: <em>Preferred</em></p>
+
+<pre><code>var x = a ? b : c;  // All on one line if it will fit.
+
+// Indentation +4 is OK.
+var y = a ?
+    longButSimpleOperandB : longButSimpleOperandC;
+
+// Indenting to the line position of the first operand is also OK.
+var z = a ?
+        moreComplicatedB :
+        moreComplicatedC;
+</code></pre></li>
+</ul></li>
+<li><p>可见性 @private and @protected: <em>Preferred</em></p>
+
+<pre><code>  // File 1.
+
+  /** @constructor */  
+  AA_PublicClass = function() {
+  };
+
+  /** @private */    
+  AA_PublicClass.staticPrivateProp_ = 1;
+
+  /** @private */
+  AA_PublicClass.prototype.privateProp_ = 2;
+
+  /** @protected */  
+  AA_PublicClass.staticProtectedProp = 31;
+
+  /** @protected */  
+  AA_PublicClass.prototype.protectedProp = 4;
+</code></pre></li>
+<li><p>使用JSDoc: <em>Preferred</em></p></li>
+</ul>
+
+    </div>
+</body>
+</html>
