@@ -27,9 +27,83 @@
 
 	* 循环迭代变量应该以"**i**", "**j**", "**k**"依次命名 *Always*
 
-* 使用2个空格作为一个单位的缩进 *Preferred*
+* 尽量使用英文进行变量命名和代码注释 *Preferred*
 
-* 以空格结尾 *Never*
+* Whitespace - 空白符
+
+	* 使用2个空格作为一个单位的缩进 *Preferred*
+
+	* 逗号后面必须跟随一个空格 *Always*
+
+	* 冒号必须前后均有一个空格 *Always*
+
+	* for循环语句的分好后方跟随一个空格 *Always*
+
+	* 分号之前没有空格 *Always*
+
+	* 函数调用的圆括号之前没有空格 *Always*
+
+    * 使用空行来将逻辑上相关的几行代码分组: *Preferred*
+
+	* 以下关键字不以空格结尾 *Always*
+		
+		* break
+	
+		* catch
+	
+		* continue
+		
+		* do
+		
+		* else
+	
+		* finally
+	
+		* for
+	
+		* function － 如果是匿名函数，例如：
+	
+				var foo = function(){};
+	
+		* if
+	
+		* return
+	
+		* switch
+	
+		* this
+		
+		* try
+	
+		* void
+	
+		* while
+	
+		* with
+	
+	* 以下关键字后方必须有一个空格 *Always*
+	
+		* case
+	
+		* default
+	
+		* delete
+	
+		* function - 如果是函数声明, 例如：
+	
+				function foo(){};
+	
+		* in
+	
+		* instanceof
+	
+		* new
+	
+		* throw
+	
+		* typeof
+	
+		* var
 
 * Getters *Preferred*
 
@@ -187,8 +261,6 @@
               ambientNotification.activate();
             }
 
-
-    * 使用空行来将逻辑上相关的代码分组: *Preferred*
 
     * 二元和三元运算符: *Preferred*
 
