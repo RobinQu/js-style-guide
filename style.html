@@ -238,17 +238,80 @@ sub {
       <h1 id="">风格规范</h1>
 
 <ul>
+<li><p>命名</p>
+
+<ul>
 <li><p>变量命名，驼背法: <em>Always</em></p>
 
 <p><strong>functionNamesLikeThis</strong>, <strong>variableNamesLikeThis</strong>, <strong>ClassNamesLikeThis</strong>, <strong>EnumNamesLikeThis</strong>, <strong>methodNamesLikeThis</strong>, and <strong>SYMBOLIC_CONSTANTS_LIKE_THIS</strong></p></li>
-<li><p>使用2个空格作为一个单位的缩进 <em>Preferred</em></p></li>
-<li><p>以空格结尾 <em>Never</em></p></li>
+<li><p>缩写和短语用在命名的时候不以全大写形式出现 <em>Preferred</em></p>
+
+<pre><code>getInnerHtml(), getXml(), XmlDocument
+</code></pre></li>
 <li><p>使用带名称的闭包 <em>Preferred</em></p>
 
 <pre><code>req.on('end', function onEnd() {
   console.log('winning');
 });
 </code></pre></li>
+<li><p>Boolean变量以“<strong>is</strong>”开头 <em>Preferred</em></p></li>
+<li><p>初始化方法以&#8220;<strong>init</strong>&#8221;、&#8220;<strong>initialize</strong>&#8221;开头 <em>Preferred</em></p></li>
+<li><p>集合的命名必须是单词的复数形式 <em>Always</em></p></li>
+<li><p>记录数量的变量应该以&#8220;<strong>num</strong>&#8221;或&#8220;<strong>count</strong>&#8221;开头 <em>Always</em></p></li>
+<li><p>循环迭代变量应该以&#8220;<strong>i</strong>&#8221;, &#8220;<strong>j</strong>&#8221;, &#8220;<strong>k</strong>&#8221;依次命名 <em>Always</em></p></li>
+</ul></li>
+<li><p>尽量使用英文进行变量命名和代码注释 <em>Preferred</em></p></li>
+<li><p>Whitespace - 空白符</p>
+
+<ul>
+<li><p>使用2个空格作为一个单位的缩进 <em>Preferred</em></p></li>
+<li><p>逗号后面必须跟随一个空格 <em>Always</em></p></li>
+<li><p>冒号必须前后均有一个空格 <em>Always</em></p></li>
+<li><p>for循环语句的分好后方跟随一个空格 <em>Always</em></p></li>
+<li><p>分号之前没有空格 <em>Always</em></p></li>
+<li><p>函数调用的圆括号之前没有空格 <em>Always</em></p></li>
+<li><p>使用空行来将逻辑上相关的几行代码分组: <em>Preferred</em></p></li>
+<li><p>以下关键字不以空格结尾 <em>Always</em></p>
+
+<ul>
+<li><p>break</p></li>
+<li><p>catch</p></li>
+<li><p>continue</p></li>
+<li><p>do</p></li>
+<li><p>else</p></li>
+<li><p>finally</p></li>
+<li><p>for</p></li>
+<li><p>function － 如果是匿名函数，例如：</p>
+
+<pre><code>var foo = function(){};
+</code></pre></li>
+<li><p>if</p></li>
+<li><p>return</p></li>
+<li><p>switch</p></li>
+<li><p>this</p></li>
+<li><p>try</p></li>
+<li><p>void</p></li>
+<li><p>while</p></li>
+<li><p>with</p></li>
+</ul></li>
+<li><p>以下关键字后方必须有一个空格 <em>Always</em></p>
+
+<ul>
+<li><p>case</p></li>
+<li><p>default</p></li>
+<li><p>delete</p></li>
+<li><p>function - 如果是函数声明, 例如：</p>
+
+<pre><code>function foo(){};
+</code></pre></li>
+<li><p>in</p></li>
+<li><p>instanceof</p></li>
+<li><p>new</p></li>
+<li><p>throw</p></li>
+<li><p>typeof</p></li>
+<li><p>var</p></li>
+</ul></li>
+</ul></li>
 <li><p>Getters <em>Preferred</em></p></li>
 <li><p>Setters <em>Careful</em></p></li>
 <li><p>嵌套闭包 <em>Never</em></p>
@@ -273,7 +336,7 @@ if (isAuthorized) {
 <li><p>代码格式化</p>
 
 <ul>
-<li><p>大括号: <em>Always</em></p>
+<li><p>if语句的大括号: <em>Always</em></p>
 
 <pre><code>if (something) {
   // ...
@@ -401,7 +464,6 @@ if (searchableCollection(allYourStuff).contains(theStuffYouWant) &amp;&amp;
   ambientNotification.activate();
 }
 </code></pre></li>
-<li><p>使用空行来将逻辑上相关的代码分组: <em>Preferred</em></p></li>
 <li><p>二元和三元运算符: <em>Preferred</em></p>
 
 <pre><code>var x = a ? b : c;  // All on one line if it will fit.
