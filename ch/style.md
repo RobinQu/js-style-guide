@@ -1,19 +1,35 @@
 风格规范
 ===========
 
-* 变量命名，驼背法: *Always*
+* 命名
 
-    **functionNamesLikeThis**, **variableNamesLikeThis**, **ClassNamesLikeThis**, **EnumNamesLikeThis**, **methodNamesLikeThis**, and **SYMBOLIC_CONSTANTS_LIKE_THIS**
-  
+	* 变量命名，驼背法: *Always*
+	
+	    **functionNamesLikeThis**, **variableNamesLikeThis**, **ClassNamesLikeThis**, **EnumNamesLikeThis**, **methodNamesLikeThis**, and **SYMBOLIC_CONSTANTS_LIKE_THIS**
+	
+	* 缩写和短语用在命名的时候不以全大写形式出现 *Preferred*
+	
+			getInnerHtml(), getXml(), XmlDocument
+	
+	* 使用带名称的闭包 *Preferred*
+
+			req.on('end', function onEnd() {
+			  console.log('winning');
+			});
+
+	* Boolean变量以“**is**”开头 *Preferred*
+
+	* 初始化方法以"**init**"、"**initialize**"开头 *Preferred*
+
+	* 集合的命名必须是单词的复数形式 *Always*
+
+	* 记录数量的变量应该以"**num**"或"**count**"开头 *Always*
+
+	* 循环迭代变量应该以"**i**", "**j**", "**k**"依次命名 *Always*
+
 * 使用2个空格作为一个单位的缩进 *Preferred*
 
 * 以空格结尾 *Never*
-
-* 使用带名称的闭包 *Preferred*
-
-		req.on('end', function onEnd() {
-		  console.log('winning');
-		});
 
 * Getters *Preferred*
 
@@ -41,7 +57,7 @@
   
 * 代码格式化
   
-    * 大括号: *Always*
+    * if语句的大括号: *Always*
 
 
             if (something) {

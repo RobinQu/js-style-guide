@@ -30,7 +30,20 @@ Aliyun CloudApp Javascript 代码规范
 
 如果你也像参与进来，可以通过再项目的SVN目录下创建source/ch/你的名字.md，在里面写下你的建议内容。我会定期将这些建议合并到正式文档里面。
 
+
 联系
 ---
 
 目前文档由long.qu维护，minjian.wang来审核。你可以联系我们之中的任何一人。
+
+
+参考文献
+-------
+
+* [Google Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
+
+* [Felix's Style Guide](http://nodeguide.com/style.html)
+
+* [The Element Of Javascript Style](http://javascript.crockford.com/style1.html)
+
+* [Dojo Style Guide](http://dojotoolkit.org/community/styleGuide)
